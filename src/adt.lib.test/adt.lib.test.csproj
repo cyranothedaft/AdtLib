@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DepthFirstSearchTester.cs" />
-    <Compile Include="GraphTester.cs" />
+    <Compile Include="Graphs\GraphTester.Basic2.cs" />
+    <Compile Include="Graphs\GraphTester.Complex6.cs" />
+    <Compile Include="Graphs\GraphTester.Complex8.cs" />
+    <Compile Include="Graphs\GraphTester.cs" />
+    <Compile Include="Graphs\GraphTester.TrivialSelfLoop1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +52,9 @@
       <Project>{5d0c73bd-51f6-4c61-9313-55145c128fa0}</Project>
       <Name>adt.lib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Graphs\GraphTester.Complex6b.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

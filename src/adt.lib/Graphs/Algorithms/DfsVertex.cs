@@ -7,13 +7,24 @@ using System.Text;
 
 namespace adt.lib.Graphs {
    internal enum DfsVertexColor {
+      /// <summary>
+      /// Indicates that a graph node has not yet been discovered by the depth-first search.
+      /// </summary>
       White,
+
+      /// <summary>
+      /// Indicates that a graph node has been discovered but not finished by the depth-first search visitation.
+      /// </summary>
       Grey,
+
+      /// <summary>
+      /// Indicates that a graph node has been finished by the depth-first search visitation.
+      /// </summary>
       Black,
    }
 
 
-   partial class GraphNode<T> {
+   partial class GraphVertex<T> {
       internal DfsVertexColor DfsColor { get; set; }
       internal int DfsDiscoveryTime { get; set; }
       internal int DfsFinishingTime { get; set; }

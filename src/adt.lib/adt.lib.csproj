@@ -41,11 +41,12 @@
   <ItemGroup>
     <Compile Include="Graphs\Algorithms\DfsEdge.cs" />
     <Compile Include="Graphs\Algorithms\DfsGraph.cs" />
-    <Compile Include="Graphs\Algorithms\DfsNode.cs" />
+    <Compile Include="Graphs\Algorithms\DfsVertex.cs" />
     <Compile Include="Graphs\Graph.cs" />
+    <Compile Include="Graphs\GraphPath.cs" />
     <Compile Include="Graphs\IGraph.cs" />
     <Compile Include="Graphs\GraphEdge.cs" />
-    <Compile Include="Graphs\GraphNode.cs" />
+    <Compile Include="Graphs\GraphVertex.cs" />
     <Compile Include="Graphs\Algorithms\DepthFirstSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree.cs" />

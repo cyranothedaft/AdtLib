@@ -12,7 +12,7 @@ namespace adt.lib.Graphs {
       /// <summary>
       /// The list of graph vertexes.  Each vertex maintains a list of its in- and out-bound adjacent vertexes.
       /// </summary>
-      private readonly List<GraphNode<T>> _vertexes = new List<GraphNode<T>>();
+      private readonly List<GraphVertex<T>> _vertexes = new List<GraphVertex<T>>();
 
 
       /// <summary>
@@ -21,18 +21,18 @@ namespace adt.lib.Graphs {
       private readonly List<GraphEdge<T>> _edges = new List<GraphEdge<T>>();
 
 
-      public IEnumerable<GraphNode<T>> Vertexes { get { return _vertexes; } }
+      public IEnumerable<GraphVertex<T>> Vertexes { get { return _vertexes; } }
       public IEnumerable<GraphEdge<T>> Edges { get { return _edges; } }
 
 
-      public GraphNode<T> AddVertex(T value) {
-         var v = new GraphNode<T>(this, value);
+      public GraphVertex<T> AddVertex(T value) {
+         var v = new GraphVertex<T>(this, value);
          _vertexes.Add(v);
          return v;
       }
 
 
-      public GraphEdge<T> AddEdge(GraphNode<T> v1, GraphNode<T> v2) {
+      public GraphEdge<T> AddEdge(GraphVertex<T> v1, GraphVertex<T> v2) {
          v1._out.Add(v2);
          v2._in.Add(v1);
 
@@ -52,7 +52,7 @@ namespace adt.lib.Graphs {
       /// <param name="value"></param>
       /// <param name="matches"></param>
       /// <returns></returns>
-      public GraphNode<T> FindVertex(T value, Func<T, T, bool> matches) {
+      public GraphVertex<T> FindVertex(T value, Func<T, T, bool> matches) {
          return _vertexes.FirstOrDefault(v => matches(v.Value, value));
       }
    }

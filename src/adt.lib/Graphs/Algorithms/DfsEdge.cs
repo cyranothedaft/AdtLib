@@ -6,9 +6,20 @@ using System.Text;
 
 
 namespace adt.lib.Graphs {
+   internal enum DfsEdgeType {
+      Undiscovered,
+      Tree,
+      Back,
+      Forward,
+      Cross,
+   }
+
+
    partial class GraphEdge<T> {
+      internal DfsEdgeType DfsType { get; set; }
+
       internal void DfsInitialize() {
-         
+         DfsType = DfsEdgeType.Undiscovered;
       }
    }
 }
